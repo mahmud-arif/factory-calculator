@@ -1,38 +1,90 @@
-.App {
-  text-align: center;
+.container {
+	height: 100vh;
+	position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.content {
+	width: 50%;
+	max-width: 650px;
+	height: 350px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-image: linear-gradient(to right bottom, #06beb6, #48b1bf);
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form-group {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	padding: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.form-group__header {
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.form-group__form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-group__input {
+	width: 80%;
+	/* height: 2rem; */
+	border: 0;
+	padding: 0.5rem 1rem;
+	font-size: 1.4rem;
+	margin-bottom: 0.5rem;
+	outline: 0;
+}
+
+.form-group__input:active,
+.form-group__input:focus {
+	border: 0;
+	outline: none;
+}
+
+.form-group__button {
+	font-size: 1rem;
+	display: inline-block;
+	padding: 0.5rem 1.5rem;
+	border-radius: 10rem;
+	border: none;
+	cursor: pointer;
+	transition: all 0.2s;
+}
+
+.form-group__button:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 1rem 2rem rgba(#000, 0.2);
+}
+
+.form-group__button:active,
+.form-group__button:focus {
+	outline: none;
+	transform: translateY(-1px);
+	box-shadow: 0 0.5rem 1rem rgba(#000, 0.2);
+}
+
+.form-group__result {
+	font-size: 2rem;
+}
+
+.num-value {
+	color: white;
+	padding: 0.5rem;
+}
+
+.form-group__error {
+	font-size: 1.2rem;
+	color: red;
 }
